@@ -6,6 +6,14 @@
   <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
+
+  <nav class="navbar"> <!-- navigation bar -->
+    <h1>Bloc Chat</h1>
+    <div class="links-container">
+      <a ui-sref="rooms" class="navbar-link">Available Chat Rooms</a>
+    </div>
+  </nav>
+
   <!-- Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
@@ -30,5 +38,7 @@
   <!-- App Files -->
   <script src="/scripts/app.js"></script>
   <script src="/scripts/controllers/HomeCtrl.js"></script>
+  <script src="/scripts/controllers/RoomCtrl.js"></script>
+  <script src="/scripts/services/Room.js"></script>
 </body>
 </html>

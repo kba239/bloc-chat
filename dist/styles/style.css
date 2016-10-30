@@ -1,0 +1,19 @@
+body {
+  background-color: white;
+  font-family: 'Open Sans';
+  color: grey;
+  min-height: 100%;
+  padding-bottom: 200px;
+}
+
+.navbar {
+  background-color: grey;
+  position: relative;
+  color: black;
+}
+
+.links-container {
+  background-color: white;
+  position: relative;
+  color: black;
+}
