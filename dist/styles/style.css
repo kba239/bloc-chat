@@ -1,19 +1,23 @@
 body {
   background-color: white;
   font-family: 'Open Sans';
-  color: grey;
+  color: black;
   min-height: 100%;
   padding-bottom: 200px;
 }
 
 .navbar {
+  height: 100%;
+  width: 30%;
   background-color: grey;
-  position: relative;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left:0;
   color: black;
 }
 
 .links-container {
-  background-color: white;
   position: relative;
   color: black;
 }
