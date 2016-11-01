@@ -1,48 +1,43 @@
-<!DOCTYPE html>
+
 <html ng-app="blocChat">
-<head lang="en">
-  <meta charset="UTF-8">
-  <title>Bloc Base Project</title>
-  <link rel="stylesheet" href="/styles/style.css">
-</head>
-<body>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>Bloc Base Project</title>
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+  <body>
+    <ui-view></ui-view>
 
-  <nav class="navbar"> <!-- navigation bar -->
-    <h1>Bloc Chat</h1>
-    <div class="links-container">
-      <a ui-sref="rooms" class="navbar-link">Available Chat Rooms</a>
-    </div>
-  </nav>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 
-  <!-- Angular -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
 
-  <!-- AngularFire -->
-  <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    <!-- UI Bootstrap -->
+    <script src="http://angular-ui.github.io/bootstrap/"></script>
 
-  <!-- UI Bootstrap -->
-  <script src="http://angular-ui.github.io/bootstrap/"></script>
+    <script>
+    // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBXhRJW2Z7lHtO52mqnfaZTHP4bewnx6VI",
+        authDomain: "bloc-chat-66364.firebaseapp.com",
+        databaseURL: "https://bloc-chat-66364.firebaseio.com",
+        storageBucket: "bloc-chat-66364.appspot.com",
+        messagingSenderId: "535710028887"
+      };
+      firebase.initializeApp(config);
+    </script>
 
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBXhRJW2Z7lHtO52mqnfaZTHP4bewnx6VI",
-    authDomain: "bloc-chat-66364.firebaseapp.com",
-    databaseURL: "https://bloc-chat-66364.firebaseio.com",
-    storageBucket: "bloc-chat-66364.appspot.com",
-    messagingSenderId: "535710028887"
-  };
-  firebase.initializeApp(config);
-</script>
-
-  <!-- App Files -->
-  <script src="/scripts/app.js"></script>
-  <script src="/scripts/controllers/HomeCtrl.js"></script>
-  <script src="/scripts/controllers/RoomCtrl.js"></script>
-  <script src="/scripts/controllers/ModalCtrl.js"></script>
-  <script src="/scripts/services/Room.js"></script>
-</body>
+    <!-- App Files -->
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/HomeCtrl.js"></script>
+    <script src="/scripts/controllers/RoomCtrl.js"></script>
+    <script src="/scripts/controllers/ModalCtrl.js"></script>
+    <script src="/scripts/services/Room.js"></script>
+  </body>
 </html>
