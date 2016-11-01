@@ -1,10 +1,16 @@
+<nav class="navbar"> <!-- navigation bar -->
+  <h1>Bloc Chat</h1>
+  <div class="links-container">
+    <a ui-sref="rooms" class="navbar-link">Available Chat Rooms</a>
+  </div>
+</nav>
 <button type="button" class="btn btn-default" ng-click="open()">Create New Room</button>
 <script type="text/ng-template" id="rooms.html">
   <div class="modal-header">
     <h2 class="modal-title">Create a new room</h2>
   </div>
   <div class="modal-body">
-      Name: <input ng-model="nameNewRoom" />
+      Name: <input ng-model="nameNewRoom"/>
   </div>
   <div class="modal-footer">
     <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
