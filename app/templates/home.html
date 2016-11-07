@@ -1,1 +1,20 @@
-<h1>Bloc Chat</h1>
+
+<aside ng-controller="RoomCtrl as roomCtrl" class="sidenav">
+  <h1>Bloc Chat</h1>
+  <h1 class="links-container">Available Chat Rooms</h1>
+    <button type="button" class="btn btn-default" ng-click="open()">Create New Room</button>
+  <ul>
+    <li ng-repeat="room in roomCtrl.rooms">
+      <a href="#"><h2 class="room-list" ng-click="home.createActive(this)"> {{ room.$value }} </h2></a>
+    </li>
+  </ul>
+</aside>
+<section>
+  <div class="active-container" ng-show="activeRoom">
+    <h2> {{ activeRoom.room.$value }} </h2>
+    <div ng-repeat="message in home.messages">
+      <div> {{ message.msgContent }} </div>
+      <div> {{ message.userId }} </div>
+    </div>
+  </div>
+</section>
