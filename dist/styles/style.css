@@ -4,9 +4,10 @@ body {
   color: black;
   min-height: 100%;
   padding-bottom: 200px;
+  z-index: 2;
 }
 
-.navbar {
+.sidenav {
   height: 100%;
   width: 30%;
   background-color: grey;
@@ -19,5 +20,14 @@ body {
 
 .links-container {
   position: relative;
+  color: black;
+}
+
+.sidenav a:hover {
+  color: grey;
+}
+
+button {
+  background-color: white;
   color: black;
 }

@@ -1,6 +1,9 @@
 (function() {
   function Room($firebaseArray) {
-    var ref = firebase.database().ref().child("rooms");
+
+    var newFirebase = new Firebase("https://bloc-chat-66364.firebaseio.com/");
+
+    var ref = newFirebase.child("rooms");
 
     var rooms = $firebaseArray(ref);
 
@@ -9,7 +12,14 @@
     };
 
     return {
-      rooms
+      all: rooms,
+      addRoom: function() {
+        var newRoomName;
+        console.log(newRoomName);
+        this.add = this.rooms.$add({
+          $value: newRoomName
+        });
+      }    
     };
   }
 
