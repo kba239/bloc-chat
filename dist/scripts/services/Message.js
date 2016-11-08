@@ -1,16 +1,18 @@
 (function() {
   function Message($firebaseArray) {
-    var newFirebase = new Firebase("https://bloc-chat-66364.firebaseio.com/");
-    var ref = newFirebase.child("messages");
+    var Message = {};
+
+    var ref = firebase.database().ref().child("messages");
     var messages = $firebaseArray(ref);
-  }
 
-  var getMessages = function(roomId) {
-    console.log(roomId);
-    var roomMessages = $firebaseArray(messagesRef.orderByChild('roomId').equalTo('roomId'));
-    return roomMessages;
-  }
+    Message.getByRoomId = function(roomId) {
+      console.log(roomId);
+      var roomMessages = $firebaseArray(messagesRef.orderByChild('roomId').equalTo('roomId'));
+      return roomMessages;
+    }
 
+    return Message;
+  }
   angular
     .module('blocChat')
     .factory('Message', ['$firebaseArray', Message]);

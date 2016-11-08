@@ -13,9 +13,10 @@
 
 
     this.open = function() {
+      console.log("open");
       $uibModal.open({
         templateUrl: 'modal.html',
-        controller: 'ModalCtrl'
+        controller: 'ModalCtrl as modal'
       });
     };
     return this.rooms;
