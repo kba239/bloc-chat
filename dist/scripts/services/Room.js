@@ -1,26 +1,25 @@
 (function() {
   function Room($firebaseArray) {
+    var Room = {};
 
-    var newFirebase = new Firebase("https://bloc-chat-66364.firebaseio.com/");
-
-    var ref = newFirebase.child("rooms");
-
+    var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
 
     var getRooms = function() {
       return rooms;
     };
 
-    return {
-      all: rooms,
-      addRoom: function() {
-        var newRoomName;
-        console.log(newRoomName);
-        this.add = this.rooms.$add({
-          $value: newRoomName
-        });
-      }    
+    Room.all = rooms;
+
+    Room.add = function() {
+      var newRoomName;
+      console.log(newRoomName);
+      this.add = this.rooms.$add({
+        $value: newRoomName
+      });
     };
+
+    return Room;
   }
 
   angular

@@ -8,7 +8,9 @@
         return newRoomName;
     };
 
-    this.addRoom = Room.addRoom();
+    this.submit = function() {
+      Room.add();
+    };
 
     this.cancel = function() {
       $uibModalInstance.dismiss();
