@@ -1,25 +1,27 @@
 (function() {
   function RoomCtrl($uibModal, Message, Room) {
-    this.rooms = Room.all;
+    var ctrl = this;
 
-    this.activeRoom;
+    ctrl.rooms = Room.all;
 
-    this.createActive = function(room) {
-      this.activeRoom = room;
-      console.console.log(this.activeRoom.room.$id);
-      this.messages = Room.getMessages(this.activeRoom.room.$id);
-      console.log(this.messages);
+    ctrl.activeRoom;
+
+/*    ctrl.createActive = function(room) {
+      ctrl.activeRoom = room;
+      console.console.log(ctrl.activeRoom.room.$id);
+      ctrl.messages = Room.getMessages(ctrl.activeRoom.room.$id);
+      console.log(ctrl.messages);
     };
+*/
 
 
-    this.open = function() {
+    ctrl.open = function() {
       console.log("open");
       $uibModal.open({
-        templateUrl: 'modal.html',
+        templateUrl: '/templates/modal.html',
         controller: 'ModalCtrl as modal'
       });
     };
-    return this.rooms;
   }
 
   angular

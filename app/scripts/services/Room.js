@@ -5,18 +5,11 @@
     var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
 
-    var getRooms = function() {
-      return rooms;
-    };
-
     Room.all = rooms;
 
-    Room.add = function() {
-      var newRoomName;
-      console.log(newRoomName);
-      this.add = this.rooms.$add({
-        $value: newRoomName
-      });
+    Room.add = function(room) {
+      console.log(room);
+      rooms.$add(room);
     };
 
     return Room;
