@@ -1,5 +1,5 @@
 (function() {
-  function RoomCtrl($uibModal, Message, Room) {
+  function RoomCtrl($uibModal, Room, Message ) {
     var ctrl = this;
 
     ctrl.rooms = Room.all;
