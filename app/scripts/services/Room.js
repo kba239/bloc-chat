@@ -8,7 +8,6 @@
     Room.all = rooms;
 
     Room.add = function(room) {
-      console.log(room);
       rooms.$add(room);
     };
 
