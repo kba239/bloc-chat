@@ -6,14 +6,14 @@
 
     ctrl.activeRoom;
 
-/*    ctrl.createActive = function(room) {
+    ctrl.chatRooms = Room.all;
+
+    ctrl.selectRoom = function(room) {
       ctrl.activeRoom = room;
-      console.console.log(ctrl.activeRoom.room.$id);
+      console.log(ctrl.activeRoom.room.$id);
       ctrl.messages = Room.getMessages(ctrl.activeRoom.room.$id);
       console.log(ctrl.messages);
     };
-*/
-
 
     ctrl.open = function() {
       console.log("open");
