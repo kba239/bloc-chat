@@ -1,5 +1,3 @@
-
-/*
 body {
   background-color: white;
   font-family: 'Open Sans';
@@ -9,6 +7,13 @@ body {
   z-index: 2;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* sidenav style */
 .sidenav {
   height: 100%;
   width: 30%;
@@ -26,11 +31,24 @@ body {
 }
 
 .sidenav a:hover {
-  color: grey;
+  color: white;
 }
 
 button {
   background-color: white;
   color: black;
 }
-*/
+
+/* list of messages style */
+.container-fluid {
+  float: right;
+}
+
+.chat-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+.chat-container li:nth-child(even){
+  background-color: grey;
+}
