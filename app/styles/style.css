@@ -17,7 +17,7 @@ ul {
 .sidenav {
   height: 100%;
   width: 30%;
-  background-color: grey;
+  background-color: LightGrey;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -28,6 +28,7 @@ ul {
 .links-container {
   position: relative;
   color: black;
+  width: 100px;
 }
 
 .sidenav a:hover {
@@ -40,8 +41,20 @@ button {
 }
 
 /* list of messages style */
+
+.room-title {
+  font-size: 50px;
+}
+
+.createdAt {
+  float: right;
+  margin-right: 25px;
+}
+
 .container-fluid {
   float: right;
+  margin-left: 100px;
+  width: 70%;
 }
 
 .chat-container {
@@ -49,6 +62,6 @@ button {
   margin-top: 20px;
 }
 
-.chat-container li:nth-child(even){
-  background-color: grey;
+.chat-container li:nth-child(odd){
+  background-color: LightGrey;
 }
