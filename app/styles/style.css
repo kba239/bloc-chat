@@ -1,6 +1,4 @@
 body {
-  background-color: white;
-  font-family: 'Open Sans';
   color: black;
   min-height: 100%;
   padding-bottom: 200px;
@@ -22,12 +20,12 @@ ul {
   z-index: 1;
   top: 0;
   left:0;
-  color: black;
+  color: SteelBlue;
 }
 
 .links-container {
   position: relative;
-  color: black;
+  color: SteelBlue;
   width: 100px;
 }
 
@@ -46,6 +44,11 @@ button {
   font-size: 50px;
 }
 
+.userName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .createdAt {
   float: right;
   margin-right: 25px;
@@ -55,6 +58,7 @@ button {
   float: right;
   margin-left: 100px;
   width: 70%;
+  background-color: white;
 }
 
 .chat-container {
@@ -64,4 +68,5 @@ button {
 
 .chat-container li:nth-child(odd){
   background-color: LightGrey;
+  color: black;
 }

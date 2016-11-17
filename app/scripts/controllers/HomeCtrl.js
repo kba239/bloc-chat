@@ -1,6 +1,16 @@
 (function() {
-  function HomeCtrl($uibModal, Room, Message) {
+  function HomeCtrl($uibModal, Room, Message, Cookies) {
     var ctrl = this;
+
+    ctrl.userName;
+
+    ctrl.open = function() {
+      console.log("open");
+      $uibModal.open({
+        templateUrl: '/templates/cookiesModal.html',
+        controller: 'CookiesModalCtrl as cookiesModal'
+      });
+    };
 
     ctrl.activeRoom;
     ctrl.rooms = Room.all;
@@ -21,5 +31,5 @@
 
   angular
     .module('blocChat')
-    .controller('HomeCtrl', ['$uibModal', 'Room', 'Message', HomeCtrl]);
+    .controller('HomeCtrl', ['$uibModal', 'Room', 'Message', 'Cookies', HomeCtrl]);
 })();
