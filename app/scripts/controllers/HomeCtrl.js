@@ -1,5 +1,5 @@
 (function() {
-  function HomeCtrl($uibModal, Room, Message, Cookies) {
+  function HomeCtrl($uibModal, Room, Message) {
     var ctrl = this;
 
     ctrl.userName;
@@ -31,5 +31,5 @@
 
   angular
     .module('blocChat')
-    .controller('HomeCtrl', ['$uibModal', 'Room', 'Message', 'Cookies', HomeCtrl]);
+    .controller('HomeCtrl', ['$uibModal', 'Room', 'Message', HomeCtrl]);
 })();

@@ -1,14 +1,20 @@
 (function() {
   function BlocChatCookies($cookies, $uibModal) {
-
     var userName = $cookies.get('blocChatCurrentUser');
+
     if (!userName || userName === '') {
       $uibModal.open({
         templateUrl: 'templates/cookiesModal.html',
-        controller: 'CookiesModalCtrl'
+        controller: function ($uibModalInstance, $cookies, $scope) {
+          $scope.submit = function() {
+            $cookies.put('blocChatCurrentUser', $scope.userName);
+            $uibModalInstance.close();
+          };
+        },
+        backdrop  : 'static',
+        keyboard  : false
       })
     }
-    return userName;
   }
 
   angular
