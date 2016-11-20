@@ -15,10 +15,14 @@
       <ul class="chat-container">
         <li class="message-container" ng-repeat="message in home.messages">
           <div class="userName"> {{ message.userName }} </div>
-          <div class="createdAt"> {{ message.createdAt }} </div>
+          <div class="createdAt"> {{ message.createdAt | date : "shortTime" }} </div>
           <div> {{ message.content }} </div>
         </li>
       </ul>
+    </div>
+    <div class="newMessage">
+      <input class="send-message" placeholder="Write your message here" ng-model="home.newMessage.content" type="text">
+      <button class="btn btn-primary" type="button" ng-click="home.sendMessage()">Send Message </button>
     </div>
   </section>
 </div>
