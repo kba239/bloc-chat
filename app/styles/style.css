@@ -70,3 +70,17 @@ button {
   background-color: LightGrey;
   color: black;
 }
+
+/* New messages */
+.newMessage {
+  position: fixed;
+  bottom: 0;
+  float: right;
+  margin-left: 35%;
+  width: 70%;
+  background-color: white;
+}
+
+.send-message {
+  width: 70%;
+}
